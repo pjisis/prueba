@@ -27,16 +27,6 @@ class HomePage extends StatelessWidget {
       // llamar al menu lateral
       appBar: AppBar(
         title: Text("Pagina de inicio"),
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => MenuLateral(),
-              ),
-            );
-          },
-        ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -114,7 +104,7 @@ class MenuLateral extends StatelessWidget {
               child: CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
-                    'https://web.facebook.com/photo?fbid=2660301620924101&set=a.1377023222585287'),
+                    'https://scontent.fgdl5-2.fna.fbcdn.net/v/t1.0-9/97647584_2660301627590767_3267925849705283584_o.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_eui2=AeG6X_Le4K78YONA8H57sRAi5eNS2kAx31rl41LaQDHfWvt9TbMOflhgiN-GHc5AKedgJw6s31a7zmR-LWykwuG0&_nc_ohc=FaWiGIPO3q0AX_ldfgP&_nc_ht=scontent.fgdl5-2.fna&oh=d8d0b4357c423897e724cfa53c9a4b7b&oe=5F60CE2C'),
               ),
             ),
           ),

@@ -34,6 +34,24 @@ class ShowPapitasDetail extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[Text("PESO: ${y.peso}")],
           ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[Text("FABRICANTE: ${y.fabricante}")],
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[Text("PRECIO: ${y.precio}")],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[Text("PESO: ${y.peso}")],
+          ),
           FlatButton(
             textColor: Colors.white,
             color: Colors.blue,

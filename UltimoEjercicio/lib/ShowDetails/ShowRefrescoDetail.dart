@@ -36,6 +36,14 @@ class ShowRefrescosDetail extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[Text("MILILITROS: ${x.minilitros}")],
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[Text("FABRICANTE: ${x.fabricante}")],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[Text("PRECIO: ${x.precio}")],
+          ),
           FlatButton(
             textColor: Colors.white,
             color: Colors.blue,
