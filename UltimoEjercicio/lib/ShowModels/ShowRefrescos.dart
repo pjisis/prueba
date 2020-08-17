@@ -21,13 +21,16 @@ class _ShowRefrescosState extends State<ShowRefrescos> {
         itemBuilder: (BuildContext context, int index) {
           return GestureDetector(
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
+              Navigator.of(context).push(
+                MaterialPageRoute(
                   builder: (context) =>
-                      ShowRefrescosDetail(x: StaticData.REFRESCO_LIST[index])));
+                      ShowRefrescosDetail(x: StaticData.REFRESCO_LIST[index]),
+                ),
+              );
             },
             child: Card(
               shape: new RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(40.0)),
+                  borderRadius: new BorderRadius.circular(25.0)),
               color: Colors.white70,
               child: Column(
                 children: <Widget>[
@@ -42,7 +45,7 @@ class _ShowRefrescosState extends State<ShowRefrescos> {
                           Icon(StaticData.REFRESCO_LIST[index].favorito
                               ? Icons.favorite
                               : Icons.favorite_border)
-                          //TODO hacer que el icono cambie con respecto a el atributo de favorito
+                          //hacer que el icono cambie con respecto a el atributo de favorito
                         ],
                       ),
                       Column(
@@ -52,7 +55,7 @@ class _ShowRefrescosState extends State<ShowRefrescos> {
                           Text(
                               "Nombre: ${StaticData.REFRESCO_LIST[index].nombre}"),
                           Text(
-                              "Minilitros: ${StaticData.REFRESCO_LIST[index].minilitros}")
+                              "Minilitros: ${StaticData.REFRESCO_LIST[index].minilitros}"),
                         ],
                       )
                     ],

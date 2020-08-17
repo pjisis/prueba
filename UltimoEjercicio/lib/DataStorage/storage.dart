@@ -6,8 +6,8 @@ import 'package:UltimoEjercicio/DataModel/refresco.dart';
 class StaticData {
   //Completar los datos con los tuyos para llamarlo al Drawer
 
-  static String USERMAIL = "";
-  static String USERNAME = "";
+  static String USERMAIL = "isis.placito@gmail.com";
+  static String USERNAME = "PjIsis";
 
   static List<Refresco> REFRESCO_LIST = [
     Refresco(
@@ -20,7 +20,7 @@ class StaticData {
     Refresco(
       fabricante: "Coca Cola",
       imagen:
-          "https://www.chedraui.com.mx/medias/7501031360161-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8NzA4MDF8aW1hZ2UvanBlZ3xoY2YvaDBkLzk1NDMzNjM2OTA1MjYuanBnfDM5MTZjYjkyMDVkY2UxNTZjOGUyNmUxYWFkOGExZTNlMGQxMmViMGIwYTAxZWM4ZmE2ZGQ1NGRmY2Q5ZjM0ZTA",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0yEIJ2D6SfBTN5NhWKAWSWulCfKL_687Osg&usqp=CAU",
       minilitros: 1000,
       nombre: "Manzana",
       favorito: false,
@@ -79,6 +79,7 @@ class StaticData {
       nombre: "Sabritas Naturales",
       fabricante: "Sabritas",
       precio: 14,
+      favorito: true,
     ),
     Papitas(
       peso: 340,
@@ -86,36 +87,43 @@ class StaticData {
       nombre: "Sabritas Adobadas",
       fabricante: "Sabritas",
       precio: 14,
-    ),
-    Papitas(
-      peso: 340,
-      imagen: "",
-      nombre: "Sabritas Naturales",
-      fabricante: "Sabritas",
-      precio: 14,
+      favorito: true,
     ),
     Papitas(
       peso: 340,
       imagen:
-          "https://www.chedraui.com.mx/medias/7501011133938-00-CH515Wx515H?context=bWFzdGVyfHJvb3R8ODA1MDl8aW1hZ2UvanBlZ3xoMTAvaGU2LzEwMjgyMzMzNTY5MDU0LmpwZ3xhMWYzZjU1ZGMzOGRiNDYwOTU1YzUwZThmNTU1YzJiYTEzYjg4NmM1ZmMyNDA5Y2YzNmVjNzliNTg5Mjk1OTFh",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdZp17rAQz5TQ1jKQHFk_DPyCGBk6VlbmUag&usqp=CAU",
+      nombre: "Fritos",
+      fabricante: "Sabritas",
+      precio: 11,
+      favorito: false,
+    ),
+    Papitas(
+      peso: 340,
+      imagen:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR-o22IpeR9X6gyYcdJpv6DfjXE4LP4OQswdg&usqp=CAU",
       nombre: "Sabritas Limón",
       fabricante: "Sabritas",
       precio: 14,
-    ),
-    Papitas(
-      peso: 340,
-      imagen: "",
-      nombre: "Sabritas Crujiente",
-      fabricante: "Sabritas",
-      precio: 14,
+      favorito: true,
     ),
     Papitas(
       peso: 340,
       imagen:
-          "https://elpoderdelconsumidor.org/wp-content/uploads/2018/10/papas-fritas-flamin-hot-d-sabritas.jpg",
-      nombre: "Sabritas Naturales",
+          "https://http2.mlstatic.com/papa-sabritas-crujiente-enchilado-flamas-D_NQ_NP_776747-MLM31941097705_082019-F.jpg",
+      nombre: "Crujientes moradas",
       fabricante: "Sabritas",
       precio: 14,
+      favorito: false,
+    ),
+    Papitas(
+      peso: 340,
+      imagen:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgaxN9gom88SeMmzv-tXdpU7eJUA7wlIWLMw&usqp=CAU",
+      nombre: "Receta Crujiente",
+      fabricante: "Sabritas",
+      precio: 14,
+      favorito: true,
     ),
     // comoletar la lista
   ];

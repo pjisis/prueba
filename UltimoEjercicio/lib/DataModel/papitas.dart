@@ -4,6 +4,12 @@ class Papitas {
   String fabricante;
   int precio;
   String imagen;
-
-  Papitas({this.peso, this.fabricante, this.nombre, this.precio, this.imagen});
+  bool favorito;
+  Papitas(
+      {this.peso,
+      this.fabricante,
+      this.nombre,
+      this.precio,
+      this.imagen,
+      this.favorito});
 }

@@ -1,8 +1,9 @@
 //
 
-import 'package:UltimoEjercicio/ShowDetails/ShowPapitasDetail.dart';
+import 'package:UltimoEjercicio/ShowModels/ShowPapitas.dart';
 import 'package:UltimoEjercicio/ShowModels/ShowRefrescos.dart';
 import 'package:flutter/material.dart';
+import 'package:UltimoEjercicio/DataStorage/storage.dart';
 
 //
 
@@ -22,8 +23,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white70,
+      drawer: MenuLateral(),
       // llamar al menu lateral
-      drawer: _returnMenuLateral(),
       appBar: AppBar(
         title: Text("Pagina de inicio"),
         leading: IconButton(
@@ -31,7 +32,7 @@ class HomePage extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => _returnMenuLateral(),
+                builder: (context) => MenuLateral(),
               ),
             );
           },
@@ -71,7 +72,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => ShowPapitasDetail(),
+                      builder: (context) => ShowPapitas(),
                     ),
                   );
                 },
@@ -85,33 +86,46 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+}
 
-  //
-  _returnMenuLateral() {
-    Drawer(
+class MenuLateral extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
       child: ListView(
-        padding: EdgeInsets.zero,
         children: <Widget>[
-          DrawerHeader(
-            child: Text("Usuar name"),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(""),
+          UserAccountsDrawerHeader(
+            accountName: Text(
+              (StaticData.USERNAME),
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
               ),
-              color: Colors.blue,
+            ),
+            accountEmail: Text(
+              (StaticData.USERMAIL),
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
+              ),
+            ),
+            currentAccountPicture: CircleAvatar(
+              backgroundColor: Colors.blueGrey,
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage(
+                    'https://web.facebook.com/photo?fbid=2660301620924101&set=a.1377023222585287'),
+              ),
             ),
           ),
-          ListTile(
-            title: Text("Item 1"),
-            onTap: () {
-              //Navigatior.pop(context);
-            },
+          Ink(
+            color: Colors.white,
+            child: new ListTile(
+              title: Text("Item 1"),
+            ),
           ),
-          ListTile(
+          new ListTile(
             title: Text("Item 2"),
-            onTap: () {
-              //Navigatior.pop(context);
-            },
           ),
         ],
       ),

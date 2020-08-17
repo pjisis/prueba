@@ -4,5 +4,12 @@ class Refresco {
   String fabricante;
   String imagen;
   bool favorito;
-  Refresco({this.nombre,this.fabricante,this.imagen,this.minilitros, this.favorito});
+  int precio;
+  Refresco(
+      {this.nombre,
+      this.fabricante,
+      this.imagen,
+      this.minilitros,
+      this.favorito,
+      this.precio});
 }

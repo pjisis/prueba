@@ -9,9 +9,11 @@ class ShowRefrescosDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     final GlobalKey<ScaffoldState> _scaffoldKey =
         new GlobalKey<ScaffoldState>();
-    //ToDo Instanciar la llave para el Scafold
+
+    //Instanciar la llave para el Scafold
 
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: Text("Detalles de ${x.nombre}"),
       ),
@@ -32,20 +34,32 @@ class ShowRefrescosDetail extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[Text("MINILITROS: ${x.minilitros}")],
+            children: <Widget>[Text("MILILITROS: ${x.minilitros}")],
           ),
           FlatButton(
             textColor: Colors.white,
             color: Colors.blue,
             onPressed: () {
-              //Todo Mostrar el SnakBar cuando se seleccione con la leyenda de "Agregado a carrito"
+              _scaffoldKey.currentState.showSnackBar(
+                new SnackBar(
+                  content: new Text('Producto agreagdo al carrito'),
+                  duration: Duration(seconds: 1),
+                ),
+              );
+              //SnakBar con la leyenda de "Agregado a carrito"
             },
             shape: new RoundedRectangleBorder(
                 borderRadius: new BorderRadius.circular(30.0)),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                //ToDo completar diseño
+                Text('Añadir al carrito'),
+                Icon(
+                  Icons.shopping_cart,
+                  color: Colors.black,
+                ),
+
+                //Completar diseño
               ],
             ),
           ),
